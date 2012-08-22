@@ -1,0 +1,5 @@
+spawn atomic {
+    x := 10; y := 10
+} atomic {
+    y := 5;  x := 5
+}

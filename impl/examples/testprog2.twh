@@ -1,0 +1,7 @@
+spawn atomic {
+  while (x <= 1) do skip;
+  z := x
+} atomic {
+  x := 2;
+  y := x
+}

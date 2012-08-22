@@ -1,0 +1,10 @@
+x := 0;
+spawn atomic {
+  x := x + 1;
+  x := x + 1
+};
+atomic {
+  if x == 1 then {
+    while true do skip
+  } else skip
+}

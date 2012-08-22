@@ -1,0 +1,11 @@
+x := 4;
+
+spawn atomic x := 2;
+
+atomic {
+  if x == 4 then {
+     if x == 2 then
+       while true do skip
+     else skip
+  } else skip
+}

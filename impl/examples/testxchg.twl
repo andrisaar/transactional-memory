@@ -1,0 +1,13 @@
+x := 5;
+y := 4;
+atomic {
+  spawn {
+    z := x;
+    x := y;
+    y := z
+  } atomic {
+    z := x;
+    x := y;
+    y := z
+  }
+}

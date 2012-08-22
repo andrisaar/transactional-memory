@@ -1,0 +1,13 @@
+x := 4;
+y := 16;
+spawn atomic {
+  x := 2;
+  y := 4
+};
+atomic {
+  if x == 4 then {
+     if y == 4 then
+       while true do skip
+     else skip
+  } else skip
+}
